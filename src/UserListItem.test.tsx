@@ -3,11 +3,11 @@ import { shallow } from 'enzyme';
 
 import { 
   UserListItem,
-  UserTaskList,
   UserListItemProps
 } from './UserListItem';
 import { UserListItemHeader } from './UserListItemHeader';
 import { UserListItemDescription } from './UserListItemDescription';
+import { UserTaskList } from './UserTaskList';
 
 describe('<UserListItem />', () => {
   it('should render a <UserListItemHeader />', () => {

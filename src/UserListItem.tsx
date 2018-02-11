@@ -2,6 +2,7 @@ import * as React from 'React';
 import { List } from 'semantic-ui-react';
 import { UserListItemHeader } from './UserListItemHeader';
 import { UserListItemDescription } from './UserListItemDescription';
+import { UserTask, UserTaskList } from './UserTaskList';
 
 export interface UserListItemProps {
   givenName: string;
@@ -9,11 +10,6 @@ export interface UserListItemProps {
   age: number;
   quotation: number;
   tasks: UserTask[];
-}
-
-export interface UserTask {
-  title: string;
-  description: string;
 }
 
 export const UserListItem = ({givenName, familyName, age, quotation, tasks}: UserListItemProps) => {
@@ -26,42 +22,5 @@ export const UserListItem = ({givenName, familyName, age, quotation, tasks}: Use
         <UserTaskList tasks={tasks} />
       </List.Content>
     </List.Item>
-  );
-};
-
-export interface UserTaskListProps {
-  tasks: UserTask[];
-}
-
-export const UserTaskList = (props: UserTaskListProps) => {
-  return (
-    <List.List>
-      <List.Item>
-        <List.Icon name="tasks" />
-        <List.Content>
-          <List.Header>Tasks</List.Header>
-          <List.List>
-            <List.Item>
-              <List.Content>
-                <List.Header>Task 1 title</List.Header>
-                <List.Description>Task 1 description</List.Description>
-              </List.Content>
-            </List.Item>
-            <List.Item>
-              <List.Content>
-                <List.Header>Task 2 title</List.Header>
-                <List.Description>Task 2 description</List.Description>
-              </List.Content>
-            </List.Item>
-            <List.Item>
-              <List.Content>
-                <List.Header>Task 3 title</List.Header>
-                <List.Description>Task 3 description</List.Description>
-              </List.Content>
-            </List.Item>
-          </List.List>
-        </List.Content>
-      </List.Item>
-    </List.List>
   );
 };

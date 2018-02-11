@@ -36,7 +36,7 @@ describe('<UserList />', () => {
       const wrapper = shallow((
         <UserList {...props} />
       ));
-      expect(wrapper.contains([<UserListItem key="users-joske" {...props.users[0]} />])).toBe(true);
+      expect(wrapper.contains([<UserListItem key="users-0" {...props.users[0]} />])).toBe(true);
     });
   });
 });
