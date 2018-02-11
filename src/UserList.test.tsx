@@ -1,6 +1,6 @@
 import * as React from 'React';
 import { shallow } from 'enzyme';
-import { UserList } from './UserList';
+import { UserList, UserListProps } from './UserList';
 import { UserListItem } from './UserListItem';
 
 describe('<UserList />', () => {

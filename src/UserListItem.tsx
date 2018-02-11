@@ -1,6 +1,7 @@
 import * as React from 'React';
 import { List } from 'semantic-ui-react';
 import { UserListItemHeader } from './UserListItemHeader';
+import { UserListItemDescription } from './UserListItemDescription';
 
 export interface UserListItemProps {
   givenName: string;
@@ -21,26 +22,10 @@ export const UserListItem = ({givenName, familyName, age, quotation, tasks}: Use
       <List.Icon name="user" />
       <List.Content>
         <UserListItemHeader givenName={givenName} familyName={familyName} age={age} quotation={quotation} />
-        <UserListItemDescription givenName={givenName} familyName={familyName} age={age} quotation={quotation} />
+        <UserListItemDescription age={age} quotation={quotation} />
         <UserTaskList tasks={tasks} />
       </List.Content>
     </List.Item>
-  );
-};
-
-export interface UserListItemDescriptionProps {
-  givenName: string;
-  familyName: string;
-  age: number;
-  quotation: number;
-}
-
-export const UserListItemDescription = (props: UserListItemDescriptionProps) => {
-  return (
-    <List.Description>
-      Age: 36 years<br />
-      Rating: 4,33/5
-    </List.Description>
   );
 };
 

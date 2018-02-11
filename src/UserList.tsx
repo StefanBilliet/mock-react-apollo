@@ -2,7 +2,7 @@ import * as React from 'React';
 import { List } from 'semantic-ui-react';
 import { UserListItem, UserListItemProps } from './UserListItem';
 
-interface UserListProps {
+export interface UserListProps {
   users: UserListItemProps[];
 }
 

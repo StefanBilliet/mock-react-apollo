@@ -2,12 +2,12 @@ import * as React from 'React';
 import { shallow } from 'enzyme';
 
 import { 
-  UserListItem, 
-  UserListItemDescription, 
+  UserListItem,
   UserTaskList,
   UserListItemProps
 } from './UserListItem';
 import { UserListItemHeader } from './UserListItemHeader';
+import { UserListItemDescription } from './UserListItemDescription';
 
 describe('<UserListItem />', () => {
   it('should render a <UserListItemHeader />', () => {
@@ -39,7 +39,7 @@ describe('<UserListItem />', () => {
       <UserListItem {...props} />
     ));
 
-  expect(wrapper.contains(<UserListItemDescription givenName="Joske" familyName="Vermeulen" age={15.5} quotation={4.3} />)).toBe(true);
+    expect(wrapper.contains(<UserListItemDescription age={15.5} quotation={4.3} />)).toBe(true);
   });
 
   it('should render a <UserTaskList />', () => {
