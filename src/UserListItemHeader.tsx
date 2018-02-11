@@ -1,5 +1,5 @@
-import * as React from 'React';
-import { List, Popup, Icon } from 'semantic-ui-react';
+import * as React from 'react';
+import { List, Icon } from 'semantic-ui-react';
 
 export interface UserListItemHeaderProps {
   givenName: string;

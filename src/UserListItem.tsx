@@ -1,4 +1,4 @@
-import * as React from 'React';
+import * as React from 'react';
 import { List } from 'semantic-ui-react';
 import { UserListItemHeader } from './UserListItemHeader';
 import { UserListItemDescription } from './UserListItemDescription';

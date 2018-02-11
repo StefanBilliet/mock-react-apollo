@@ -1,4 +1,4 @@
-import * as React from 'React';
+import * as React from 'react';
 import { shallow } from 'enzyme';
 import { UserList, UserListProps } from './UserList';
 import { UserListItem } from './UserListItem';
