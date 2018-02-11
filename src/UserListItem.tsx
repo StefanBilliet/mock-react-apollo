@@ -14,14 +14,14 @@ export interface UserTask {
   description: string;
 }
 
-export const UserListItem = (props: UserListItemProps) => {
+export const UserListItem = ({givenName, familyName, age, quotation, tasks}: UserListItemProps) => {
   return (
     <List.Item>
       <List.Icon name="user" />
       <List.Content>
-        <UserListItemHeader />
-        <UserListItemDescription />
-        <UserTaskList />
+        <UserListItemHeader givenName={givenName} familyName={familyName} age={age} quotation={quotation} />
+        <UserListItemDescription givenName={givenName} familyName={familyName} age={age} quotation={quotation} />
+        <UserTaskList tasks={tasks} />
       </List.Content>
     </List.Item>
   );
@@ -59,7 +59,11 @@ export const UserListItemDescription = (props: UserListItemDescriptionProps) => 
   );
 };
 
-export const UserTaskList = (props) => {
+export interface UserTaskListProps {
+  tasks: UserTask[];
+}
+
+export const UserTaskList = (props: UserTaskListProps) => {
   return (
     <List.List>
       <List.Item>
