@@ -4,5 +4,10 @@ import { App } from './App';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+  const props = {
+    data: {
+      loading: true
+    }
+  };
+  ReactDOM.render(<App {...props} />, div);
 });

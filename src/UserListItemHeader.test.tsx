@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { UserListItemHeaderProps, UserListItemHeader } from './UserListItemHeader';
-import { Icon } from 'semantic-ui-react';
+import { Icon, Label } from 'semantic-ui-react';
 
 describe('<UserListItemHeader />', () => {
   it('should render the full name of the user', () => {
@@ -33,7 +33,7 @@ describe('<UserListItemHeader />', () => {
           <UserListItemHeader {...props} />
         ));
     
-        expect(wrapper.contains(<div><Icon name="star" color="yellow" /> (Top!)</div>)).toBe(false);
+        expect(wrapper.contains(<Label className="commendation"><Icon name="star" color="yellow" /> (Top!)</Label>)).toBe(false);
       });
     });
 
@@ -50,7 +50,7 @@ describe('<UserListItemHeader />', () => {
           <UserListItemHeader {...props} />
         ));
     
-        expect(wrapper.contains(<div><Icon name="star" color="yellow" /> (Top!)</div>)).toBe(true);
+        expect(wrapper.contains(<Label className="commendation"><Icon name="star" color="yellow" /> (Top!)</Label>)).toBe(true);
       });
     });
 
@@ -67,7 +67,7 @@ describe('<UserListItemHeader />', () => {
           <UserListItemHeader {...props} />
         ));
     
-        expect(wrapper.contains(<div><Icon name="star" color="yellow" /> (Top!)</div>)).toBe(true);
+        expect(wrapper.contains(<Label className="commendation"><Icon name="star" color="yellow" /> (Top!)</Label>)).toBe(true);
       });
     });
   });
@@ -86,7 +86,7 @@ describe('<UserListItemHeader />', () => {
           <UserListItemHeader {...props} />
         ));
     
-        expect(wrapper.contains(<div><Icon name="star" color="yellow" /> (Top!)</div>)).toBe(false);
+        expect(wrapper.contains(<Label className="commendation"><Icon name="star" color="yellow" /> (Top!)</Label>)).toBe(false);
       });
     });
 
@@ -103,7 +103,7 @@ describe('<UserListItemHeader />', () => {
           <UserListItemHeader {...props} />
         ));
     
-        expect(wrapper.contains(<div><Icon name="star" color="yellow" /> (Top!)</div>)).toBe(true);
+        expect(wrapper.contains(<Label className="commendation"><Icon name="star" color="yellow" /> (Top!)</Label>)).toBe(true);
       });
     });
 
@@ -120,7 +120,7 @@ describe('<UserListItemHeader />', () => {
           <UserListItemHeader {...props} />
         ));
     
-        expect(wrapper.contains(<div><Icon name="star" color="yellow" /> (Top!)</div>)).toBe(true);
+        expect(wrapper.contains(<Label className="commendation"><Icon name="star" color="yellow" /> (Top!)</Label>)).toBe(true);
       });
     });
   });
