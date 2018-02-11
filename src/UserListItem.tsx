@@ -1,5 +1,6 @@
 import * as React from 'React';
-import { List, Popup, Icon } from 'semantic-ui-react';
+import { List } from 'semantic-ui-react';
+import { UserListItemHeader } from './UserListItemHeader';
 
 export interface UserListItemProps {
   givenName: string;
@@ -24,22 +25,6 @@ export const UserListItem = ({givenName, familyName, age, quotation, tasks}: Use
         <UserTaskList tasks={tasks} />
       </List.Content>
     </List.Item>
-  );
-};
-
-export interface UserListItemHeaderProps {
-  givenName: string;
-  familyName: string;
-  age: number;
-  quotation: number;
-}
-
-export const UserListItemHeader = (props: UserListItemHeaderProps) => {
-  return (
-    <List.Header>
-      Joske Vermeulen
-      <Popup trigger={<Icon name="star" color="yellow" />} content="Top!" />
-    </List.Header>
   );
 };
 
