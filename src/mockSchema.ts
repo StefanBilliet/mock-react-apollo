@@ -11,8 +11,8 @@ const mocks = {
   User: () => ({
     givenName: casual.first_name,
     familyName: casual.last_name,
-    age: () => casual.double(0, 100),
-    quotation: () => casual.double(0, 5),
+    age: () => parseFloat(casual.double(0, 100).toFixed(2)),
+    quotation: () => parseFloat(casual.double(0, 5).toFixed(2)),
     tasks: () => new MockList([1, 5])
   }),
   Task: () => ({
