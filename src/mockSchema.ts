@@ -6,7 +6,7 @@ const schema = makeExecutableSchema({ typeDefs: typeDefinitions });
 
 const mocks = {
   Query: () => ({
-    users: () => new MockList([1, 10])
+    users: () => new MockList([1, 20])
   }),
   User: () => ({
     givenName: casual.first_name,
